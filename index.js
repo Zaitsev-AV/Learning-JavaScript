@@ -32,3 +32,14 @@ const pickIt = (arr) => {
 	}
 	return [odd, even];
 };
+
+// css you tube shorts one
+
+function onSphereClick() {
+  const h3 = document.getElementsByClassName('upper')
+  h3.classList.remove('display') 
+  setTimeout(() => {
+    const num = Math.random()
+  h3.innerText = num > 0, 5 ? 'yes' : 'no';
+  }, 1000)
+}

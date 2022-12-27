@@ -1,0 +1,18 @@
+* {
+   background-color: black;
+}
+h3 {
+   height:35em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 
+}
+.arrow-up {
+   width: 0;
+   height: 0;
+   border-left: 50px solid transparent;
+   border-right: 50px solid transparent;
+   border-bottom: 50px solid blueviolet;
+
+}
