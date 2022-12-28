@@ -52,4 +52,20 @@ function findOutlier(integers){
 		 n = odd[0]
 		 }
 	return n
- }
+}
+ 
+// Next kata /Training JS #11: loop statement --break,continue
+
+const grabDoll = (dolls) => {
+   let bag=[];
+   for (let i = 0; i < dolls.length; i++) {
+      if (bag.length >= 3) {
+         break
+      }
+      if (dolls[i] === "Hello Kitty" || dolls[i] === "Barbie doll"){
+         bag.push(dolls[i])
+         continue
+      }
+   }
+   return bag;
+}
