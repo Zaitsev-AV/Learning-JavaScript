@@ -87,6 +87,25 @@ const giveMeFive = (obj) => {
 
 //Next kata Remove exclamation marks
 function removeExclamationMarks(s) {
-   let newS = s.replace(/!/gi, '');
-   return newS;
+	let newS = s.replace(/!/gi, "");
+	return newS;
 }
+
+//Task FreeCodeCamp
+// Измените функцию multiplyAll так, чтобы она возвращала произведение всех чисел в подмассивах arr.
+
+function multiplyAll(arr) {
+	let product = 1;
+	for (let i = 0; i < arr.length; i++) { // заходим в массив с массивами 
+		for (let j = 0; j < arr[i].length; j++) { // проходим по подмассиву 
+			product *= arr[i][j]; // вот тут затупил, если брать массив то получаем для первой итерации циклов сначала получим массив [1, 2] это 'i' далее заходим в него и получаем 0-вой элемент этого массива, то есть 1 и далее всё это зацикливаем. 
+		}
+	}
+	return product;
+}
+
+multiplyAll([
+	[1, 2],
+	[3, 4],
+	[5, 6, 7],
+]);
