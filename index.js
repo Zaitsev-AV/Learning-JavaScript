@@ -84,3 +84,9 @@ const giveMeFive = (obj) => {
 	}
 	return newArr;
 };
+
+//Next kata Remove exclamation marks
+function removeExclamationMarks(s) {
+   let newS = s.replace(/!/gi, '');
+   return newS;
+}
