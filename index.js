@@ -32,3 +32,24 @@ const pickIt = (arr) => {
 	}
 	return [odd, even];
 };
+
+// Next kata 6 kyu
+
+function findOutlier(integers){
+	let even =[]
+	let odd = []
+	let n;
+	for(let i = 0; i < integers.length; i++) {
+	  if (integers[i] % 2 == 0) {
+		 even.push(integers[i])
+	  } else {
+		 odd.push(integers[i])
+		 }
+	}
+	if (even.length === 1) {
+	  n = even[0]
+	  } else {
+		 n = odd[0]
+		 }
+	return n
+ }
