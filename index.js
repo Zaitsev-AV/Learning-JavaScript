@@ -170,3 +170,8 @@ function numberJoy(n) {
 		return false;
 	}
 }
+
+//Next kata Perpendicular lines
+function maxBisectors(n) {
+	return Math.round(Math.pow(n / 2, 2));
+}
