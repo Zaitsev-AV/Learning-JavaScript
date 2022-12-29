@@ -109,3 +109,17 @@ multiplyAll([
 	[3, 4],
 	[5, 6, 7],
 ]);
+
+// Next kata. Необходимо определить самое короткое слово в массиве и по его длинне обрезать все остальные слова.
+
+const cutIt = (arr) => {
+	let minArrLength = [];
+	let min = arr[0].length; // для поиска слова с меньшей длинной
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i].length < min) min = arr[i].length; // проходим по массиву и сравниваем длинну слов, если оно короче то заменяем. 
+	}
+	for (let i = 0; i < arr.length; i++) {
+		minArrLength.push(arr[i].slice(0, min)); // в этом цикле просто образаем слова и пушим их в новый массив 
+	}
+	return minArrLength;
+};
