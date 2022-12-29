@@ -123,3 +123,15 @@ const cutIt = (arr) => {
 	}
 	return minArrLength;
 };
+
+// Next kata Beginner - Reduce but Grow
+
+const grow = (x) => {
+	let n = 1;
+	for (let i = 0; i < x.length; i++) {
+		n *= x[i]
+	}
+	return n
+}
+// Можно сократить до этого 
+// const grow=x=> x.reduce((a,b) => a*b);
