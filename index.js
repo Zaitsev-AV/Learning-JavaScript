@@ -133,5 +133,11 @@ const grow = (x) => {
 	}
 	return n
 }
-// Можно сократить до этого 
+// Можно сократить до этого
 // const grow=x=> x.reduce((a,b) => a*b);
+
+// Next Kata Subtract the Sum
+
+function SubtractSum(n){
+	return "apple"
+ }
