@@ -96,9 +96,11 @@ function removeExclamationMarks(s) {
 
 function multiplyAll(arr) {
 	let product = 1;
-	for (let i = 0; i < arr.length; i++) { // заходим в массив с массивами 
-		for (let j = 0; j < arr[i].length; j++) { // проходим по подмассиву 
-			product *= arr[i][j]; // вот тут затупил, если брать массив то получаем для первой итерации циклов сначала получим массив [1, 2] это 'i' далее заходим в него и получаем 0-вой элемент этого массива, то есть 1 и далее всё это зацикливаем. 
+	for (let i = 0; i < arr.length; i++) {
+		// заходим в массив с массивами
+		for (let j = 0; j < arr[i].length; j++) {
+			// проходим по подмассиву
+			product *= arr[i][j]; // вот тут затупил, если брать массив то получаем для первой итерации циклов сначала получим массив [1, 2] это 'i' далее заходим в него и получаем 0-вой элемент этого массива, то есть 1 и далее всё это зацикливаем.
 		}
 	}
 	return product;
@@ -116,10 +118,10 @@ const cutIt = (arr) => {
 	let minArrLength = [];
 	let min = arr[0].length; // для поиска слова с меньшей длинной
 	for (let i = 0; i < arr.length; i++) {
-		if (arr[i].length < min) min = arr[i].length; // проходим по массиву и сравниваем длинну слов, если оно короче то заменяем. 
+		if (arr[i].length < min) min = arr[i].length; // проходим по массиву и сравниваем длинну слов, если оно короче то заменяем.
 	}
 	for (let i = 0; i < arr.length; i++) {
-		minArrLength.push(arr[i].slice(0, min)); // в этом цикле просто образаем слова и пушим их в новый массив 
+		minArrLength.push(arr[i].slice(0, min)); // в этом цикле просто образаем слова и пушим их в новый массив
 	}
 	return minArrLength;
 };
@@ -129,15 +131,42 @@ const cutIt = (arr) => {
 const grow = (x) => {
 	let n = 1;
 	for (let i = 0; i < x.length; i++) {
-		n *= x[i]
+		n *= x[i];
 	}
-	return n
-}
+	return n;
+};
 // Можно сократить до этого
 // const grow=x=> x.reduce((a,b) => a*b);
 
 // Next Kata Subtract the Sum
 
-function SubtractSum(n){
-	return "apple"
- }
+function SubtractSum(n) {
+	return "apple";
+}
+
+// Next kata Especially Joyful Numbers
+
+function numberJoy(n) {
+	let number = n
+		.toString()
+		.split("")
+		.reduce(function (a, b) {
+			return +a + +b;
+		});
+	let numberRevers = n
+		.toString()
+		.split("")
+		.reduce(function (a, b) {
+			return +a + +b;
+		});
+	let reversed = numberRevers.toString().split("");
+	let arrReverse = reversed.reverse();
+	let arrReverseToNumber = arrReverse.reduce(function (a, b) {
+		return a + b;
+	});
+	if (number * arrReverseToNumber == n) {
+		return true;
+	} else {
+		return false;
+	}
+}
