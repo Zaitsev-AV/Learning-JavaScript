@@ -219,4 +219,25 @@ const quarterOf = (month) => {
 		default:
 			break;
 	}
+}
+ 
+// Next kat Cat years, Dog years
+const humanYearsCatYearsDogYears = (humanYears) => {
+	let cats = 0
+	let dog = 0
+	let result = []
+	if (humanYears > 2) {
+		cats = ((humanYears - 2) * 4) + 24;
+		dog = ((humanYears - 2) * 5) + 24;
+	}
+	if (humanYears === 2) {
+		cats = 24
+		dog = 24
+	}
+	if (humanYears === 1) {
+		cats = 15
+		dog = 15
+	}
+	result.push(humanYears, cats, dog)
+	return result;
  }
