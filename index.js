@@ -175,3 +175,13 @@ function numberJoy(n) {
 function maxBisectors(n) {
 	return Math.round(Math.pow(n / 2, 2));
 }
+// Next kata Are they the "same"?
+function comp(a1, a2) {
+	if (a1 === null || a2 === null) return false;
+	for (let i = 0; i < a2.length; i++) {
+		const ind = a1.indexOf(Math.sqrt(a2[i]));
+		if (ind == -1) return false;
+		a1[ind] = null;
+	}
+	return true;
+}
