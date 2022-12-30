@@ -221,7 +221,7 @@ const quarterOf = (month) => {
 	}
 }
  
-// Next kat Cat years, Dog years
+// Next kata Cat years, Dog years
 const humanYearsCatYearsDogYears = (humanYears) => {
 	let cats = 0
 	let dog = 0
@@ -240,4 +240,17 @@ const humanYearsCatYearsDogYears = (humanYears) => {
 	}
 	result.push(humanYears, cats, dog)
 	return result;
- }
+}
+ 
+// Решение задачи выше через switch case
+
+function humanYearsCatYearsDogYears(humanYears) {
+	switch (humanYears) {
+		case 1:
+			return [1, 15, 15]
+		case 2:
+			return [2, 24, 24];
+		default:
+			return [humanYears, (humanYears - 2) * 4 + 24, (humanYears - 2) * 5 + 24];
+	}
+}
