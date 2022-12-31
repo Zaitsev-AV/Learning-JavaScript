@@ -190,79 +190,109 @@ function comp(a1, a2) {
 
 const min = (list) => {
 	let min = list[0];
-	 for (let i = 0; i < list.length; i++) {
-		 if (list[i] < min) min = list[i];
-	 }   
-	  return min;
- }
- 
- const max = (list) =>{
-	 let max = list[0];
-	 for (let i = 0; i < list.length; i++) {
-		 if (list[i] > max) max = list[i];
-	 }   
-	  return max;
-}
- 
+	for (let i = 0; i < list.length; i++) {
+		if (list[i] < min) min = list[i];
+	}
+	return min;
+};
+
+const max = (list) => {
+	let max = list[0];
+	for (let i = 0; i < list.length; i++) {
+		if (list[i] > max) max = list[i];
+	}
+	return max;
+};
+
 // Next kata Quarter of the year
 
 const quarterOf = (month) => {
 	switch (month) {
-		case 1: case 2: case 3:
-			return 1
-		case 4: case 5: case 6:
-			return 2
-		case 7: case 8: case 9:
-			return 3
-		case 10: case 11: case 12:
-			return 4
+		case 1:
+		case 2:
+		case 3:
+			return 1;
+		case 4:
+		case 5:
+		case 6:
+			return 2;
+		case 7:
+		case 8:
+		case 9:
+			return 3;
+		case 10:
+		case 11:
+		case 12:
+			return 4;
 		default:
 			break;
 	}
-}
- 
+};
+
 // Next kata Cat years, Dog years
 const humanYearsCatYearsDogYears = (humanYears) => {
-	let cats = 0
-	let dog = 0
-	let result = []
+	let cats = 0;
+	let dog = 0;
+	let result = [];
 	if (humanYears > 2) {
-		cats = ((humanYears - 2) * 4) + 24;
-		dog = ((humanYears - 2) * 5) + 24;
+		cats = (humanYears - 2) * 4 + 24;
+		dog = (humanYears - 2) * 5 + 24;
 	}
 	if (humanYears === 2) {
-		cats = 24
-		dog = 24
+		cats = 24;
+		dog = 24;
 	}
 	if (humanYears === 1) {
-		cats = 15
-		dog = 15
+		cats = 15;
+		dog = 15;
 	}
-	result.push(humanYears, cats, dog)
+	result.push(humanYears, cats, dog);
 	return result;
-}
- 
+};
+
 // Решение задачи выше через switch case
 
 function humanYearsCatYearsDogYears(humanYears) {
 	switch (humanYears) {
 		case 1:
-			return [1, 15, 15]
+			return [1, 15, 15];
 		case 2:
 			return [2, 24, 24];
 		default:
-			return [humanYears, (humanYears - 2) * 4 + 24, (humanYears - 2) * 5 + 24];
+			return [
+				humanYears,
+				(humanYears - 2) * 4 + 24,
+				(humanYears - 2) * 5 + 24,
+			];
 	}
 }
 
 // Next kata Are they the "same"?
 
-function comp(a1, a2){
-	if (a1 === null || a2 === null) return false
-	for (let i = 0; i<a2.length; i++) {
-	  const ind = a1.indexOf(Math.sqrt(a2[i]))
-	  if (ind == -1) return false
-	  a1[ind] = null 
+function comp(a1, a2) {
+	if (a1 === null || a2 === null) return false;
+	for (let i = 0; i < a2.length; i++) {
+		const ind = a1.indexOf(Math.sqrt(a2[i]));
+		if (ind == -1) return false;
+		a1[ind] = null;
 	}
-	return true 
- }
+	return true;
+}
+
+// Next kata Find Maximum and Minimum Values of a List
+
+const miN = (list) => {
+	let min = list[0];
+	for (let i = 0; i < list.length; i++) {
+		if (list[i] < min) min = list[i];
+	}
+	return min;
+};
+
+const maX = (list) => {
+	let max = list[0];
+	for (let i = 0; i < list.length; i++) {
+		if (list[i] > max) max = list[i];
+	}
+	return max;
+};
