@@ -299,6 +299,12 @@ const maX = (list) => {
 
 // Next kata Is it a palindrome?
 function isPalindrome(x) {
-	let a = x.split('').reverse().join('');
-	return x.toLowerCase() === a.toLowerCase() ? true : false
+	let a = x.split("").reverse().join("");
+	return x.toLowerCase() === a.toLowerCase() ? true : false;
+}
+
+//Next kata How many lightsabers do you own?
+
+function howManyLightenersDoYouOwn(name) {
+	return name === 'Zach' ? 18 : 0;
  }
