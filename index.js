@@ -306,30 +306,38 @@ function isPalindrome(x) {
 //Next kata How many lightsabers do you own?
 
 function howManyLightenersDoYouOwn(name) {
-	return name === 'Zach' ? 18 : 0;
+	return name === "Zach" ? 18 : 0;
 }
- 
+
 // Next kata Difference of Volumes of Cuboids
 
-const findDifference =(a, b) => {
+const findDifference = (a, b) => {
 	let one = a.reduce(function (acc, item) {
 		return acc * item;
-	})
+	});
 	console.log(one);
 	let two = b.reduce(function (acc, item) {
 		return acc * item;
-	})
+	});
 	console.log(two);
-	return Math.abs(one - two)
-}
+	return Math.abs(one - two);
+};
 
 // Next kata Parse nice int from char problem
 
-const getAge = (inputString) => +inputString[0]
+const getAge = (inputString) => +inputString[0];
 
 //Next kata Convert a Number to a String!
 
-const numberToString = (num) => num.toString()
+const numberToString = (num) => num.toString();
 
 // Next kata Convert a String to a Number!
 const stringToNumber = (str) => +str;
+
+// Next kata Human Readable Time
+const humanReadable = (seconds) =>
+	[
+		("0" + parseInt(seconds / (60 * 60))).slice(-2),
+		("0" + parseInt((seconds / 60) % 60)).slice(-2),
+		("0" + (seconds % 60)).slice(-2),
+	].join(":");
