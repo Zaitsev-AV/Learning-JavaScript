@@ -381,3 +381,6 @@ function switchItUp(number) {
 var a = "code";
 var b = "wa.rs";
 var name = a + b;
+
+// next kata Third Angle of a Triangle
+const otherAngle = (a, b) => 180 - (a + b);
