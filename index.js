@@ -384,3 +384,6 @@ var name = a + b;
 
 // next kata Third Angle of a Triangle
 const otherAngle = (a, b) => 180 - (a + b);
+
+// Next kata Sum The Strings
+const sumStr = (a,b) => `${+a + +b}`
