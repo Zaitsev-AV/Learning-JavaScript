@@ -341,3 +341,12 @@ const humanReadable = (seconds) =>
 		("0" + parseInt((seconds / 60) % 60)).slice(-2),
 		("0" + (seconds % 60)).slice(-2),
 	].join(":");
+
+// Next kata String repeat
+function repeatStr(n, s) {
+	let str = "";
+	for (let i = 0; i < n; i++) {
+		str += s;
+	}
+	return str;
+}
