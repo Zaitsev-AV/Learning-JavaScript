@@ -307,4 +307,18 @@ function isPalindrome(x) {
 
 function howManyLightenersDoYouOwn(name) {
 	return name === 'Zach' ? 18 : 0;
- }
+}
+ 
+// Next kata Difference of Volumes of Cuboids
+
+const findDifference =(a, b) => {
+	let one = a.reduce(function (acc, item) {
+		return acc * item;
+	})
+	console.log(one);
+	let two = b.reduce(function (acc, item) {
+		return acc * item;
+	})
+	console.log(two);
+	return Math.abs(one - two)
+}
