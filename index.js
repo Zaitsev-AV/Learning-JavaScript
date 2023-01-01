@@ -322,3 +322,7 @@ const findDifference =(a, b) => {
 	console.log(two);
 	return Math.abs(one - two)
 }
+
+// Next kata Parse nice int from char problem
+
+const getAge = (inputString) => +inputString[0]
