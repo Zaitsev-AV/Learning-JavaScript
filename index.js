@@ -330,3 +330,6 @@ const getAge = (inputString) => +inputString[0];
 //Next kata Convert a Number to a String!
 
 const numberToString = (num) => num.toString();
+
+// Next kata Convert a String to a Number!
+const stringToNumber = (str) => +str;
