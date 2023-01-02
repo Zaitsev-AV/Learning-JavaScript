@@ -333,3 +333,11 @@ const numberToString = (num) => num.toString();
 
 // Next kata Convert a String to a Number!
 const stringToNumber = (str) => +str;
+
+// Next kata Human Readable Time
+const humanReadable = (seconds) =>
+	[
+		("0" + parseInt(seconds / (60 * 60))).slice(-2),
+		("0" + parseInt((seconds / 60) % 60)).slice(-2),
+		("0" + (seconds % 60)).slice(-2),
+	].join(":");
