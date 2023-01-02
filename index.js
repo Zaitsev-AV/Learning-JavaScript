@@ -326,3 +326,7 @@ const findDifference = (a, b) => {
 // Next kata Parse nice int from char problem
 
 const getAge = (inputString) => +inputString[0];
+
+//Next kata Convert a Number to a String!
+
+const numberToString = (num) => num.toString();
