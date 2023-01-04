@@ -364,7 +364,7 @@ function getAverage(marks) {
 	return Math.trunc(num / marks.length);
 }
 
-// Next kata Safen User Input Part I - htmlspecialchars
+// Next kata Safen User Input Part I - htmlspecialchars 
 function htmlspecialchars(formData) {
 	let str = "";
 	for (let i = 0; i < formData.length; i++) {
@@ -381,7 +381,5 @@ function htmlspecialchars(formData) {
 			str += formData[i];
 		}
 	}
-
 	return str;
-	console.log(str);
 }
