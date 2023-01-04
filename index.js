@@ -383,3 +383,7 @@ function htmlspecialchars(formData) {
 	}
 	return str;
 }
+// Next kata Remove First and Last Character
+function removeChar(str){
+	return str.slice(1, -1)
+  };
