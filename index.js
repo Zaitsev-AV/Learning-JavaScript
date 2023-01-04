@@ -342,7 +342,7 @@ const humanReadable = (seconds) =>
 		("0" + (seconds % 60)).slice(-2),
 	].join(":");
 
-	// Next kata String repeat
+// Next kata String repeat
 function repeatStr(n, s) {
 	let str = "";
 	for (let i = 0; i < n; i++) {
@@ -352,4 +352,14 @@ function repeatStr(n, s) {
 }
 
 //Next kata Last digit of a large number
-const lastDigit =(str1, str2) => +!+str2 || Math.pow(str1.slice(-1), str2.slice(-2) % 4 || 4) %10
+const lastDigit = (str1, str2) =>
+	+!+str2 || Math.pow(str1.slice(-1), str2.slice(-2) % 4 || 4) % 10;
+
+//Next kata Get the mean of an array
+function getAverage(marks) {
+	let num = 0;
+	for (let i = 0; i < marks.length; i++) {
+		num += marks[i];
+	}
+	return Math.trunc(num / marks.length);
+}
