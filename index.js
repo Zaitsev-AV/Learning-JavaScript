@@ -363,3 +363,25 @@ function getAverage(marks) {
 	}
 	return Math.trunc(num / marks.length);
 }
+
+// Next kata Safen User Input Part I - htmlspecialchars
+function htmlspecialchars(formData) {
+	let str = "";
+	for (let i = 0; i < formData.length; i++) {
+		if (formData[i] === "<") {
+			str += "&lt;";
+		} else if (formData[i] === ">") {
+			str += "&gt;";
+		} else if (formData[i] === '"') {
+			str += "&quot;";
+			continue;
+		} else if (formData[i] === "&") {
+			str += "&amp;";
+		} else {
+			str += formData[i];
+		}
+	}
+
+	return str;
+	console.log(str);
+}
